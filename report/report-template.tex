@@ -1,0 +1,70 @@
+% report-template.tex
+% --
+% Mud Dog Creative (Software Hut, Group #1)
+% 
+
+% We want this to be an article
+\documentclass[pdftex,a4paper,10pt,titlepage]{article}
+
+% Outline the packages to be used
+\usepackage[utf8]{inputenc}
+\usepackage[round,authoryear,sort]{natbib}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage[anythingbreaks]{breakurl}
+
+% This somehow fixes very long url breaking. I dont even know what it does!
+\expandafter\def\expandafter\UrlBreaks\expandafter{\UrlBreaks%  save the current one
+  \do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j%
+  \do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t%
+  \do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D%
+  \do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N%
+  \do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X%
+  \do\Y\do\Z}
+
+% Begin the document
+\begin{document}
+
+% Define title and make it (this will include the date by default
+\title{\textbf{ICP-2302 / Software Hut} \\
+Title of Document \\ 
+Mud Dog Creative (\texttt{Group \#1})}
+
+\maketitle
+
+
+% Begin the abstract, defining what this article is about.
+%\begin{abstract}
+%abstract
+%\end{abstract}
+
+% Render stuff which isn't top matter on a separate page
+\pagebreak
+
+
+
+
+% Set up page style for fancy headers, along with the header information (and page width!)
+\newgeometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Mud Dog Creative \texttt{(Group \#1)}}
+\rhead{ICP-2302}
+\cfoot{\thepage}
+
+% Generate a table of contents on the page
+\tableofcontents
+\pagebreak
+
+
+% Actual content of the document
+\section{Some example section}
+Hello, this is an example section. Hello, this is an example section. Hello, this is an example section. Hello, this is an example section. Hello, this is an example section. Hello, this is an example section. Hello, this is an example section. Hello, this is an example section. Hello, this is an example section. Hello, this is an example section. Hello, this is an example section. Hello, this is an example section. \\
+
+
+
+
+% End the document
+\end{document} 
